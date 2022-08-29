@@ -1,33 +1,35 @@
 import random 
 user_score = 0
 computer_score = 0
-options = ['Rock', 'Paper', 'Scissors']
+# list of options for the user to ick from
+options = ['beans', 'bread', 'rice']
 
 while True:
-    user_input = input('Type Rock/ Paper / Scissors or Q to quit:  ').lower()
+    # user input, to know what the user would pick
+    user_input = input('What would you like to eat? Beans/Bread/Rice: or Q to quit:  ').lower()
     if user_input == 'q':
         break
 
     if user_input not in options:
         continue
 
-
+ #  a variable (random_number) where beans is 0, bread is 1, rice is 2
     random_number = random.randint(0, 2)
-    # rock is 0, paper is 1, scissors is 2
+# variable to know the computer's choice from the list of options
     computer_choice = options[random_number]
     print('computer picked', computer_choice + ".")
 
-    if (user_input == 'Rock') and (computer_choice == 'Scissors'):
+    if (user_input == 'beans') and (computer_choice == 'bread'):
         print('you won! ')
         user_score += 1
         
 
-    elif user_input == 'Paper' and computer_choice == 'Rock':
+    elif user_input == 'rice' and computer_choice == 'beans':
         print('you won! ')
         user_score += 1
         
 
-    elif user_input == 'Paper' and computer_choice == 'Scissors':
+    elif user_input == 'bread' and computer_choice == 'rice':
         print('you won! ')
         user_score += 1
         
