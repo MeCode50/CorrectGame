@@ -3,10 +3,10 @@ user_score = 0
 computer_score = 0
 # list of options for the user to ick from
 options = ['beans', 'bread', 'rice']
-
+print()
 while True:
-    # user input, to know what the user would pick
-    user_input = input('What would you like to eat? Beans/Bread/Rice: or Q to quit:  ').lower()
+    # user input, to know what the user would like to eat
+    user_input = input('What would you like to eat ? Beans/Bread/Rice: or Q to quit:  ').lower()
     if user_input == 'q':
         break
 
@@ -24,7 +24,7 @@ while True:
         user_score += 1
         
 
-    elif user_input == 'rice' and computer_choice == 'beans':
+    elif user_input == 'rice' and computer_choice == 'bread':
         print('you won! ')
         user_score += 1
         
@@ -41,5 +41,7 @@ print('you won', user_score , 'times')
 print('computer won', computer_score ,'times.')
 
 print('thanks for playing this game. ')
+
+
 
 
